@@ -1,6 +1,6 @@
 # Live Video Streaming Client and Server
 
-This project was bootstraped with
+This project was bootstrapped with
 
 -   React Redux
 -   Node Media Server
