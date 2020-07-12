@@ -54,7 +54,7 @@ function Show(props) {
     }
 
     function socketChat() {
-        socket = SocketIo.connect(`http://localhost:3005`, {
+        socket = SocketIo.connect(`${process.env.REACT_APP_SOCKET_URL}`, {
             transports: ["websocket"],
             query: {
                 streamId: String(props.match.params.id),
