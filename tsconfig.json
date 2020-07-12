@@ -2,13 +2,15 @@
     "compilerOptions": {
         "strict": true,
         "esModuleInterop": true,
-        "lib": ["esnext"],
+        "lib": ["esnext", "dom"],
         "target": "ES2018",
         "module": "commonjs",
         "sourceMap": false,
         "declaration": true,
         "resolveJsonModule": true,
         "moduleResolution": "node",
-        "noImplicitAny": false
+        "noImplicitAny": false,
+        "outDir": "./dist",
+        "rootDir": "./server"
     }
 }

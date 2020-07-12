@@ -1,0 +1,10 @@
+version: "3"
+services:
+    app:
+        container_name: livestream
+        restart: always
+        build: .
+        ports:
+            - "3005:${PORT_PROD}"
+            - "8000:8000"
+            - "1935:1935"
