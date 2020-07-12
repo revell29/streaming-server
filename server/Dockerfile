@@ -7,7 +7,7 @@ COPY package*.json ./
 
 COPY . .
 
-RUN npm install
+RUN npm install --silent
 
 RUN npm run build
 

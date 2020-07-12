@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import db from "../../utils/db.json";
-import * as _ from "underscore";
+import _ from "underscore";
 
 class StreamController {
     static async listStream(req: Request, res: Response): Promise<void> {
