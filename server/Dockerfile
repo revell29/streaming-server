@@ -11,7 +11,7 @@ RUN npm install
 
 RUN npm run build
 
-COPY . ./
+COPY . /usr/src/app
 
 EXPOSE 3005
 

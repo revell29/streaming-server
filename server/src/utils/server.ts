@@ -50,16 +50,6 @@ export default class Server {
         this.application.use("/api*", (req, res, next) => {
             res.status(400).send({ message: "Ooops! not found." });
         });
-        this.application.use(express.static(__dirname + "./../../"));
-        this.application.use("/static", express.static(path.join(__dirname, `../../assets`)));
-
-        this.application.get("*", (req, res) => {
-            res.sendFile(path.join(__dirname, "../../index.html"), function (err) {
-                if (err) {
-                    res.status(500).send(err);
-                }
-            });
-        });
     }
 
     public run(): void {
