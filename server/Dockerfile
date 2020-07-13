@@ -9,10 +9,12 @@ COPY . .
 
 RUN npm install --silent
 
+RUN npm install pm2 -g 
+
 RUN npm run build
 
 COPY . /usr/src/app
 
 EXPOSE 3005
 
-CMD ["npm", "start"]
+CMD ["pm2-runtime", "dist/index.js"]

@@ -9,4 +9,4 @@ services:
         container_name: web-app
         build: .
         ports:
-            - "80:80"
+            - "8001:8001"

@@ -18,7 +18,7 @@ function Show(props) {
         const id = String(props.match.params.id);
         player = flv.createPlayer({
             type: "flv",
-            url: `${process.env.REACT_APP_STREAM_URL}/live/${id}.flv`,
+            url: `http://meet.vertilogic.com:8000/live/${id}.flv`,
         });
 
         player.attachMediaElement(videoRef.current);
