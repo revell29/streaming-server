@@ -18,7 +18,7 @@ function Show(props) {
         const id = String(props.match.params.id);
         player = flv.createPlayer({
             type: "flv",
-            url: `http://meet.vertilogic.com:8000/live/${id}.flv`,
+            url: `http://localhost:8000/live/${id}.flv`,
         });
 
         player.attachMediaElement(videoRef.current);
@@ -75,7 +75,10 @@ function Show(props) {
         socketChat();
         socket.emit("join", String(props.match.params.id));
         incomingMessage();
-        console.log(props);
+
+        return () => {
+            player.destroy();
+        };
     }, []);
 
     return (

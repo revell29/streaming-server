@@ -12,7 +12,7 @@ function Home(props) {
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
                 {props.streams.map((item, key) => (
                     <div className="shadow" key={key}>
-                        <Link to={"/streams/" + item.id}>
+                        <Link to={"/streams/" + item._id}>
                             <img src="https://i.ya-webdesign.com/images/play-button-image-png-4.png" alt="" />
                         </Link>
                         <div className="p-4">

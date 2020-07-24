@@ -1,6 +1,7 @@
 import http from "http";
 import express, { Application } from "express";
-import path from "path";
+import mongoose from "mongoose";
+import { dbConfig } from "../lib/config";
 import * as bodyParser from "body-parser";
 import dotenv from "dotenv";
 import router from "../routes";
@@ -22,6 +23,7 @@ export default class Server {
         this.port = process.env.PORT || 3005;
         this.application = express();
         this.server = http.createServer(this.application);
+        this.mongodb();
         this.socket();
         this.plugins();
         this.rtmp();
@@ -43,6 +45,13 @@ export default class Server {
 
     private rtmp(): void {
         rtmpServer();
+    }
+
+    private mongodb(): void {
+        mongoose
+            .connect(dbConfig, { useNewUrlParser: true })
+            .then(() => console.log("mongoDB Connected"))
+            .catch((err: any) => console.log(err));
     }
 
     private routes(): void {
