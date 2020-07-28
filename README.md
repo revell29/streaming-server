@@ -30,7 +30,7 @@ Stream key: 1 (or whatever http://localhost:3005/streams/4 id you are looking at
     -   Create chat server [done]
     -   Create Web App with React [done]
     -   Improve Web App [on progress]
-    -   Streaming from webcam [none]
+    -   Streaming from webcam [on progress]
     -   Create beautifull documentation
     -   Scalling up Server
     -   Dockerizing app [done]

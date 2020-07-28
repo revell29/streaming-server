@@ -1458,6 +1458,11 @@ cross-spawn@^6.0.0:
     shebang-command "^1.2.0"
     which "^1.2.9"
 
+crypto-js@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/crypto-js/-/crypto-js-4.0.0.tgz#2904ab2677a9d042856a2ea2ef80de92e4a36dcc"
+  integrity sha512-bzHZN8Pn+gS7DQA6n+iUmBfl0hO5DJq++QP3U6uTucDtk/0iGpXd/Gg7CGR0p8tJhofJyaKoWBuJI4eAO00BBg==
+
 crypto-random-string@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/crypto-random-string/-/crypto-random-string-1.0.0.tgz#a230f64f568310e1498009940790ec99545bca7e"
@@ -2773,9 +2778,9 @@ node-fetch@^2.6.0:
   integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
 
 node-media-server@^2.1.9:
-  version "2.1.9"
-  resolved "https://registry.yarnpkg.com/node-media-server/-/node-media-server-2.1.9.tgz#429664a91d7cde7114753755ba3cfcbfcfc3334a"
-  integrity sha512-YVL9jwQ4eefYUqEDe/PTwDl34n3OwZJ6ZgoX9uPzOxtdIRIg9IpCB+75DJ915hODk7c1drNeAPFawH1tOa8GWg==
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/node-media-server/-/node-media-server-2.2.2.tgz#b9609a1708b3c5ad8a4468326cd31e1f84a0d726"
+  integrity sha512-2lKO17rhzyRVvkYs4pVZuKwhFIz2HOOKo9vE5VlaJOFNKgiwZepK203PPTTL3eK7cdFAPz0ilb2pC6hddBA1Fg==
   dependencies:
     basic-auth-connect "^1.0.0"
     chalk "^2.4.2"

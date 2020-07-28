@@ -77,6 +77,6 @@ const config = {
     },
 };
 
-const dbConfig = process.env.MONGO_URL;
+const dbConfig = "mongodb://localhost:27017/streaming_server";
 
 export { config, dbConfig };

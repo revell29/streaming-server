@@ -7,6 +7,7 @@ router.get("/test", (req: Request, res: Response) => {
 });
 
 router.get("/streams", StreamController.listStream);
+router.post("/streams", StreamController.create);
 router.get("/streams/:id", StreamController.detailStream);
 
 export default router;

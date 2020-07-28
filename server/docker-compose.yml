@@ -1,5 +1,10 @@
 version: "3"
 services:
+    mongo:
+        container_name: mongo
+        image: mongo
+        ports:
+            - "27019:27017"
     server:
         container_name: server-live
         restart: always
@@ -8,3 +13,5 @@ services:
             - "3001:3005"
             - "8000:8000"
             - "1935:1935"
+        links:
+            - mongo

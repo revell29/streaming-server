@@ -1,10 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState, useRef } from "react";
-import flv from "flv.js";
 import SocketIo from "socket.io-client";
 import MessageList from "../../components/MessageList";
 import { fetchStream } from "../../utils/api";
-
+import VideoPlayer from "../../components/VideoPlayer";
 let socket;
 
 function Show(props) {
@@ -12,18 +11,11 @@ function Show(props) {
     const [messages, setMessages] = useState([]);
     const [message, setMessage] = useState("");
     const [dataStream, setDataStream] = useState({});
+    const id = String(props.match.params.id);
+    const streamingURL = `${process.env.REACT_APP_STREAM_URL}/hls_720p/${id}/index.m3u8`;
     let player;
 
-    function buildPlayer() {
-        const id = String(props.match.params.id);
-        player = flv.createPlayer({
-            type: "flv",
-            url: `http://localhost:8000/live/${id}.flv`,
-        });
-
-        player.attachMediaElement(videoRef.current);
-        player.load();
-    }
+    function buildPlayer() {}
 
     function sendMessage() {
         socket.emit("send message", {
@@ -75,10 +67,6 @@ function Show(props) {
         socketChat();
         socket.emit("join", String(props.match.params.id));
         incomingMessage();
-
-        return () => {
-            player.destroy();
-        };
     }, []);
 
     return (
@@ -92,8 +80,8 @@ function Show(props) {
             <div className="p-10 w-full h-full">
                 <div className="mb-3">
                     <h1 className="text-4xl font-semibold">{dataStream.title}</h1>
+                    <VideoPlayer source={streamingURL} />
                 </div>
-                <video ref={videoRef} style={{ width: "100%" }} controls={true} />
             </div>
         </div>
     );

@@ -39,6 +39,7 @@ function rtmpServer() {
             const name = StreamPath.split("/").pop();
             createPlaylist(name);
         }
+        console.log("Create playlist", StreamPath);
     });
 
     nms.on("donePublish", async (id: any, StreamPath: any, _args: any) => {
